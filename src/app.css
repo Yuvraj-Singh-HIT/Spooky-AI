@@ -1,0 +1,110 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	@apply h-full;
+}
+
+/* Custom animations for 3D effects */
+@keyframes float {
+	0%, 100% { 
+		transform: translateY(0px) rotate(12deg); 
+	}
+	50% { 
+		transform: translateY(-20px) rotate(12deg); 
+	}
+}
+
+@keyframes float-delayed {
+	0%, 100% { 
+		transform: translateY(0px) rotate(-12deg); 
+	}
+	50% { 
+		transform: translateY(-15px) rotate(-12deg); 
+	}
+}
+
+@keyframes bounce-slow {
+	0%, 100% { 
+		transform: translateY(0px) rotate(45deg); 
+	}
+	50% { 
+		transform: translateY(-10px) rotate(45deg); 
+	}
+}
+
+/* Utility classes for 3D effects */
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+	animation: float-delayed 4s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+	animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.perspective-1000 {
+	perspective: 1000px;
+}
+
+/* Custom scrollbar for modern look */
+.custom-scrollbar::-webkit-scrollbar {
+	width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+	border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+/* Enhanced glass morphism */
+.glass-effect {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth transitions for interactive elements only */
+button,
+input,
+a,
+.transition {
+	transition-property: color, background-color, border-color, transform, box-shadow, opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 200ms;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+input:focus-visible {
+	@apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Custom glow effects */
+.glow-blue {
+	box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.glow-purple {
+	box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.glow-cyan {
+	box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
