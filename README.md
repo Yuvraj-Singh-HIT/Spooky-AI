@@ -155,12 +155,3 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 *If you enjoy Spooky AI, give it a ⭐ on GitHub!*
 ```
-
-This README features:
-- **Modern design** with emojis and clean sections
-- **Clear call-to-action** with your live demo link
-- **Sound recommendation** as you requested
-- **Technical depth** with code examples
-- **Easy deployment** instructions
-- **Customization guides**
-- **Visual hierarchy** with tables and code blocks
